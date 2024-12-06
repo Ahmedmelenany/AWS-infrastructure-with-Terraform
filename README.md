@@ -3,7 +3,7 @@
 
 This project provisions an AWS infrastructure using Terraform. The architecture consists of a Virtual Private Cloud (VPC), two EC2 instances in public subnets, and an S3 bucket for storage and AWS Load balancer. Below is a detailed explanation of the components and their functionality.
 
-![Images/Architecture.png]
+![aws](./Images/Architecture.png)
 
 ## Architecture Overview
 
@@ -60,6 +60,7 @@ The project is organized as follows:
   - S3
   - VPC
   - IAM
+  - ELB
 
 ## Setup and Deployment
 
@@ -69,41 +70,27 @@ The project is organized as follows:
    cd <repository_directory>
    ```
 
-2. **Customize Variables**:
-   Modify the `terraform.tfvars` file to suit your environment:
-   ```hcl
-   aws_region      = "us-east-1"
-   instance_type   = "t2.micro"
-   key_name        = "<your_key_pair>"
-   vpc_cidr        = "172.16.0.0/16"
-   public_subnets  = ["172.16.1.0/24", "172.16.2.0/24"]
-   ```
-
-3. **Initialize Terraform**:
+2. **Initialize Terraform**:
    ```bash
    terraform init
    ```
 
-4. **Plan the Deployment**:
+3. **Plan the Deployment**:
    Review the resources to be created:
    ```bash
    terraform plan
    ```
 
-5. **Apply the Deployment**:
+4. **Apply the Deployment**:
    Deploy the infrastructure:
    ```bash
    terraform apply
    ```
 
-6. **Output Resources**:
+5. **Output Resources**:
    After applying, Terraform outputs details such as:
    - EC2 instance public IPs
    - S3 bucket name
-
-## Diagram
-
-![AWS Architecture Diagram](./Screenshot 2024-12-06 180620.png)
 
 ## Cleanup
 
@@ -118,6 +105,4 @@ terraform destroy
 - Update IAM roles and policies to restrict access according to the principle of least privilege.
 - Use a secure mechanism to store and manage sensitive information like SSH keys and AWS credentials.
 
-## License
-
-This project is licensed under the MIT License.
+## End Of Project
