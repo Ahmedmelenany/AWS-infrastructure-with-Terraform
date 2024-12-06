@@ -3,7 +3,8 @@
 
 This project provisions an AWS infrastructure using Terraform. The architecture consists of a Virtual Private Cloud (VPC), two EC2 instances in public subnets, and an S3 bucket for storage and AWS Load balancer. Below is a detailed explanation of the components and their functionality.
 
-![aws](InfraArchitecture.png)
+![InfraArchitecture](https://github.com/user-attachments/assets/adf4bb71-e622-4dc2-97b2-f90f0cd6616c)
+
 
 ## Architecture Overview
 
